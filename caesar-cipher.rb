@@ -1,4 +1,6 @@
 def caesarCipher(str, shiftFactor)
+  #Normalize shiftFactor into 0-25 range
+  shiftFactor %= 26
   str.chars.map do |char|
     if char >= 'A' && char <= 'Z'
       base = 'A'.ord
@@ -12,6 +14,6 @@ def caesarCipher(str, shiftFactor)
   end.join
 end
 
-test = caesarCipher("HELLO!", 5)
+test = caesarCipher("Hello World!", 5)
 
 puts test
