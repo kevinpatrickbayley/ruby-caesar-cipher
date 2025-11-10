@@ -9,7 +9,7 @@ def caesarCipher(str, shiftFactor)
     else
       char
     end
-  end
+  end.join
 end
 
 test = caesarCipher("HELLO!", 5)
